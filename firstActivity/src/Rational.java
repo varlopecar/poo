@@ -10,6 +10,11 @@ public class Rational {
         this.denominator = denominator;
     }
 
+    public Rational(Rational rational){
+        numerator = rational.getNumerator();
+        denominator = rational.getDenominator();
+    }
+
     public void multiply(Rational other) {
         this.numerator *= other.numerator;
         this.denominator *= other.denominator;
@@ -36,6 +41,22 @@ public class Rational {
             return a;
         }
         return gcd(b, a % b);
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
     }
 
     public String toString() {
