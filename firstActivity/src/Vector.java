@@ -4,7 +4,10 @@ public class Vector {
     public Vector(int size){
         tab = new Rational[size];
         for(int i = 0; i < tab.length; i++){
-            tab[i] = new Rational(0, 1);
+            tab[i] = new Rational(i, i - 1);
+        }
+        if (size == 0){
+            throw new IllegalArgumentException("Size cannot be zero");
         }
     }
 
@@ -28,9 +31,16 @@ public class Vector {
         }
     }
 
-    public void multiply(Rational other){
-        for(int i = 0; i < tab.length; i++){
-            tab[i].multiply(other);
+    public void set(int i){
+        tab[i] = new Rational(i, i - 1);
+        if (i == 0){
+            throw new IllegalArgumentException("i cannot be zero");
+        }
+    }
+
+    public void get(int i){
+        if (i < 0 || i >= tab.length){
+            throw new IllegalArgumentException("Index out of bounds");
         }
     }
 

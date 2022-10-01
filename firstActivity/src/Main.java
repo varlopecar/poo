@@ -23,7 +23,11 @@ public class Main {
         Rational r8 = Rational.mult(r6, r7);
 //        System.out.println("R8 \n" + r8);
 
+        Vector v1 = new Vector(new Rational[]{new Rational(1, 2), new Rational(1, 3), new Rational(1, 4)});
 
+        Vector v2 = new Vector(new Rational[]{new Rational(1, 2), new Rational(1, 3), new Rational(1, 4)});
 
+        v1.add(v2);
+        System.out.println("V1 \n" + v1);
     }
 }
