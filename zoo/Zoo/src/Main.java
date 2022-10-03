@@ -7,6 +7,7 @@ public class Main {
         Zoo zoo = new Zoo("Zoo de Grenoble");
         zoo.addAnimal(lion1);
         zoo.addAnimal(canard1);
+        zoo.addAnimal(canard2);
 
         System.out.println(zoo);
         zoo.cry();
