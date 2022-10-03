@@ -20,6 +20,13 @@ public class Rational {
         this.denominator *= other.denominator;
     }
 
+    public void set(int i, Rational rational){
+        if (i < 0 || i >= tab.length){
+            throw new IllegalArgumentException("Index out of bounds");
+        }
+        tab[i] = new Rational(rational);
+    }
+
     public static Rational mult(Rational a, Rational b) {
         Rational c = new Rational(a.numerator * b.numerator, a.denominator * b.denominator);
         return c;
